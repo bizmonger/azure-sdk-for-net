@@ -9,7 +9,7 @@ using NUnit.Framework;
 
 namespace Azure.Monitor.Query.Tests
 {
-    public class MetricsClientSamples: SamplesBase<MonitorQueryClientTestEnvironment>
+    public class MetricsQueryClientSamples: SamplesBase<MonitorQueryClientTestEnvironment>
     {
         [Test]
         [Ignore("https://github.com/Azure/azure-sdk-for-net/issues/21657")]
@@ -18,7 +18,7 @@ namespace Azure.Monitor.Query.Tests
             #region Snippet:QueryMetrics
 
 #if SNIPPET
-            Uri endpoint = new Uri("https://management.azure.com");
+            var endpoint = new Uri("https://management.azure.com");
             string resourceId =
                 "/subscriptions/<subscription_id>/resourceGroups/<resource_group_name>/providers/Microsoft.OperationalInsights/workspaces/<workspace_name>";
 #else
