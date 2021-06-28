@@ -2,8 +2,8 @@
 
 The `Azure.Monitor.Query` package provides the ability to query the following Azure Monitor data sources:
 
-* [Azure Monitor Logs](https://docs.microsoft.com/azure/azure-monitor/logs/data-platform-logs)&mdash;Collects and organizes log and performance data from monitored resources. Data from different sources such as platform logs from Azure services, log and performance data from virtual machines agents, and usage and performance data from apps can be consolidated into a single workspace. The various data types can be analyzed together using the [Kusto Query Language](https://docs.microsoft.com/azure/data-explorer/kusto/query).
-* [Azure Monitor Metrics](https://docs.microsoft.com/azure/azure-monitor/essentials/data-platform-metrics)&mdash;Collects numeric data from monitored resources into a time series database. Metrics are numerical values that are collected at regular intervals and describe some aspect of a system at a particular time. Metrics in Azure Monitor are lightweight and capable of supporting near real-time scenarios, making them particularly useful for alerting and fast detection of issues.
+- [Azure Monitor Logs](https://docs.microsoft.com/azure/azure-monitor/logs/data-platform-logs) - Collects and organizes log and performance data from monitored resources. Data from different sources such as platform logs from Azure services, log and performance data from virtual machines agents, and usage and performance data from apps can be consolidated into a single workspace. The various data types can be analyzed together using the [Kusto Query Language](https://docs.microsoft.com/azure/data-explorer/kusto/query).
+- [Azure Monitor Metrics](https://docs.microsoft.com/azure/azure-monitor/essentials/data-platform-metrics) - Collects numeric data from monitored resources into a time series database. Metrics are numerical values that are collected at regular intervals and describe some aspect of a system at a particular time. Metrics in Azure Monitor are lightweight and capable of supporting near real-time scenarios, making them particularly useful for alerting and fast detection of issues.
 
 [Source code][query_client_src] | [Package (NuGet)][query_client_nuget_package]
 
@@ -19,12 +19,12 @@ dotnet add package Azure.Monitor.Query --prerelease
 
 ### Prerequisites
 
-* An [Azure subscription][azure_sub].
-* To query logs, you need an existing Log Analytics workspace. You can create it with one of the following approaches:
-  * [Azure Portal](https://docs.microsoft.com/azure/azure-monitor/logs/quick-create-workspace)
-  * [Azure CLI](https://docs.microsoft.com/azure/azure-monitor/logs/quick-create-workspace-cli)
-  * [PowerShell](https://docs.microsoft.com/azure/azure-monitor/logs/powershell-workspace-configuration)
-* To query metrics, all you need is an Azure resource of any kind (Storage Account, Key Vault, Cosmos DB, etc.).
+- An [Azure subscription][azure_sub].
+- To query logs, you need an existing Log Analytics workspace. You can create it with one of the following approaches:
+  - [Azure Portal](https://docs.microsoft.com/azure/azure-monitor/logs/quick-create-workspace)
+  - [Azure CLI](https://docs.microsoft.com/azure/azure-monitor/logs/quick-create-workspace-cli)
+  - [PowerShell](https://docs.microsoft.com/azure/azure-monitor/logs/powershell-workspace-configuration)
+- To query metrics, all you need is an Azure resource of any kind (Storage Account, Key Vault, Cosmos DB, etc.).
 
 ### Authenticate the client
 
@@ -32,8 +32,8 @@ To interact with the Azure Monitor service, create an instance of a [TokenCreden
 
 ## Key concepts
 
-* `LogsQueryClient`&mdash;Client that provides methods to query logs from Azure Monitor Logs.
-* `MetricsQueryClient`&mdash;Client that provides methods to query metrics from Azure Monitor Metrics.
+- `LogsQueryClient` - Client that provides methods to query logs from Azure Monitor Logs.
+- `MetricsQueryClient` - Client that provides methods to query metrics from Azure Monitor Metrics.
 
 ### Thread safety
 
@@ -53,12 +53,12 @@ All client instance methods are thread-safe and independent of each other ([guid
 
 ## Examples
 
-* [Query logs](#query-logs)
-* [Query logs as model](#query-logs-as-model)
-* [Query logs as primitive](#query-logs-as-primitive)
-* [Batch query](#batch-query)
-* [Query dynamic table](#query-dynamic-table)
-* [Increase query timeout](#increase-query-timeout)
+- [Query logs](#query-logs)
+- [Query logs as model](#query-logs-as-model)
+- [Query logs as primitive](#query-logs-as-primitive)
+- [Batch query](#batch-query)
+- [Query dynamic table](#query-dynamic-table)
+- [Increase query timeout](#increase-query-timeout)
 
 ### Query logs
 
